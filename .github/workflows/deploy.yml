@@ -73,7 +73,7 @@ jobs:
             --exclude='data/test' \
             . hf_deploy/
           cd hf_deploy
-          git init
+          git init -b main
           git config user.email "ci@github.com"
           git config user.name "GitHub Actions"
           git add .
