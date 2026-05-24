@@ -20,12 +20,15 @@ API_KEY = os.environ.get("API_KEY", "")
 @asynccontextmanager
 async def lifespan(app: FastAPI):
     global _pipeline
-    _pipeline = RetrievalPipeline(
-        checkpoint_path=os.environ["MODEL_PATH"],
-        index_path=os.environ["INDEX_PATH"],
-        device=os.environ.get("DEVICE", "cpu"),
-    )
-    logger.info("pipeline ready")
+    if os.environ.get("TESTING") != "1":
+        _pipeline = RetrievalPipeline(
+            checkpoint_path=os.environ["MODEL_PATH"],
+            index_path=os.environ["INDEX_PATH"],
+            device=os.environ.get("DEVICE", "cpu"),
+        )
+        logger.info("pipeline ready")
+    else:
+        logger.info("TESTING=1: skipping model load")
     yield
 
 

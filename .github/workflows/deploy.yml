@@ -34,11 +34,14 @@ jobs:
       - name: Smoke test container health endpoint
         run: |
           docker run -d --name app \
-            -e MODEL_PATH=/app/result/best_clip_deploy.pt \
-            -e INDEX_PATH=/app/result/gallery.index \
+            -e TESTING=1 \
             -p 8000:8000 \
             visual-similarity-search:${{ github.sha }}
-          sleep 5
+          for i in $(seq 1 15); do
+            curl -sf http://localhost:8000/health && break
+            echo "Waiting for server... ($i/15)"
+            sleep 2
+          done
           curl --fail http://localhost:8000/health || (docker logs app && exit 1)
           docker stop app
 
