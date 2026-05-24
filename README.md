@@ -1,3 +1,13 @@
+---
+title: Visual Similarity Search
+emoji: 🔍
+colorFrom: blue
+colorTo: purple
+sdk: docker
+app_port: 8000
+pinned: false
+---
+
 # Visual Similarity Search — Deep Metric Learning on TLL
 
 A portfolio project demonstrating end-to-end image retrieval: from metric learning research to a production-ready serving pipeline.
