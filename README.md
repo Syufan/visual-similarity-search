@@ -79,6 +79,30 @@ Pre-computed embeddings and the FAISS index are committed under `result/` — yo
 
 ---
 
+## Benchmarks
+
+FAISS IVFFlat retrieval, 2000-vector gallery, 256-dim embeddings, k=20 (CPU, Apple M-series).
+
+**Single-threaded latency (1000 queries)**
+
+| Mean | P50 | P95 | P99 |
+|------|-----|-----|-----|
+| 0.049 ms | 0.046 ms | 0.050 ms | 0.074 ms |
+
+**Concurrent QPS**
+
+| Concurrency | QPS | P99 (ms) |
+|-------------|-----|----------|
+| 1 | 12,635 | 0.08 |
+| 4 | 28,027 | 0.41 |
+| 8 | 28,441 | 1.23 |
+| 16 | 27,332 | 3.19 |
+| 32 | 21,486 | 2.16 |
+
+System saturates at ~8 concurrent workers (~28K QPS); beyond that, thread contention increases P99 without improving throughput.
+
+---
+
 ## Roadmap
 
 - [ ] FastAPI serving endpoint (`POST /search`, `GET /health`)
