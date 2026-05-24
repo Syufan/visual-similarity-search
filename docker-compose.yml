@@ -1,0 +1,11 @@
+services:
+  retrieval-api:
+    build: .
+    ports:
+      - "8000:8000"
+    volumes:
+      - ./result:/app/result
+    environment:
+      - MODEL_PATH=/app/result/best_clip_deploy.pt
+      - INDEX_PATH=/app/result/gallery.index
+      - API_KEY=${API_KEY}
