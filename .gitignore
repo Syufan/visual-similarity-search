@@ -33,10 +33,12 @@ env/
 data/train/
 data/test/
 
-# ML checkpoints (large model weights — not committed)
+# ML checkpoints and binary artifacts (stored on HF Hub)
 checkpoints/
 *.pth
 *.pt
+result/gallery.index
+result/gallery_embeddings.npy
 
 # IDE
 .vscode/
