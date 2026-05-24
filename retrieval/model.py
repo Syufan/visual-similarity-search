@@ -31,7 +31,7 @@ class CLIPLoRA(nn.Module):
         super().__init__()
         from transformers import CLIPModel
         clip = CLIPModel.from_pretrained("openai/clip-vit-base-patch32")
-        self.vision_encoder = clip.vision_model
+        self.vision_encoder = clip.vision_model.vision_model  # CLIPVisionTransformer
 
         for p in self.vision_encoder.parameters():
             p.requires_grad_(False)
