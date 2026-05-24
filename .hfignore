@@ -1,0 +1,7 @@
+result/gallery.index
+result/gallery_embeddings.npy
+result/best_clip_deploy.pt
+result/*.png
+result/*.csv
+result/*.json
+data/
