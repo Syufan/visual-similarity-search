@@ -31,7 +31,7 @@ class CLIPLoRA(nn.Module):
         super().__init__()
         from transformers import CLIPModel
         clip = CLIPModel.from_pretrained("openai/clip-vit-base-patch32")
-        self.vision_encoder = clip.vision_model.vision_model  # CLIPVisionTransformer
+        self.vision_encoder = clip.vision_model
 
         for p in self.vision_encoder.parameters():
             p.requires_grad_(False)
@@ -70,7 +70,7 @@ def get_model(checkpoint_path: str, device: str = "cpu"):
     global _model, _preprocess, _device
     if _model is None:
         model = CLIPLoRA().to(device)
-        state = torch.load(checkpoint_path, map_location=device, weights_only=True)
+        state = torch.load(checkpoint_path, map_location=device)
         model.load_state_dict(state)
         model.eval()
         _model = model
