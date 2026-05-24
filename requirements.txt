@@ -1,7 +1,6 @@
-torch==2.1.0
-torchvision==0.16.0
+# torch and torchvision are pre-installed in the pytorch/pytorch base image
 open_clip_torch>=2.24.0
-faiss-cpu>=1.7.4
+faiss-cpu==1.7.4
 fastapi>=0.111.0
 uvicorn[standard]>=0.29.0
 python-multipart>=0.0.9
