@@ -73,9 +73,10 @@ jobs:
             --exclude='data/test' \
             . hf_deploy/
           cd hf_deploy
-          git init -b main
+          git init
           git config user.email "ci@github.com"
           git config user.name "GitHub Actions"
+          git checkout -b main
           git add .
           git commit -m "deploy: $(date -u +%Y-%m-%dT%H:%M:%SZ)"
           git remote add hf https://$HF_USERNAME:$HF_TOKEN@huggingface.co/spaces/$HF_USERNAME/visual-similarity-search
