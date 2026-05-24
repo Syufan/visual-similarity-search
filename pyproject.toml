@@ -3,7 +3,9 @@ name = "visual-similarity-search"
 version = "0.1.0"
 description = "Add your description here"
 requires-python = ">=3.13"
-dependencies = []
+dependencies = [
+    "huggingface-hub>=1.16.1",
+]
 
 [dependency-groups]
 dev = [
