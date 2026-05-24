@@ -6,6 +6,9 @@
 .Spotlight-V100
 .Trashes
 
+# uv
+.venv/
+
 # Python
 __pycache__/
 *.py[cod]

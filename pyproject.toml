@@ -1,0 +1,15 @@
+[project]
+name = "visual-similarity-search"
+version = "0.1.0"
+description = "Add your description here"
+requires-python = ">=3.13"
+dependencies = []
+
+[dependency-groups]
+dev = [
+    "httpx>=0.28.1",
+    "pillow>=12.2.0",
+    "pytest>=8.2",
+    "pytest-asyncio>=1.3.0",
+    "python-multipart>=0.0.29",
+]
