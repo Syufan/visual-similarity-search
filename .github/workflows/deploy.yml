@@ -1,0 +1,51 @@
+name: CI/CD
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.10"
+
+      - name: Install test dependencies
+        run: pip install -r requirements-dev.txt
+
+      - name: Run tests
+        run: pytest tests/ -v --tb=short
+
+  docker-build:
+    runs-on: ubuntu-latest
+    needs: test
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Build Docker image
+        run: docker build -t visual-similarity-search:${{ github.sha }} .
+
+      - name: Smoke test container health endpoint
+        run: |
+          docker run -d --name app \
+            -e MODEL_PATH=/app/result/best_clip_deploy.pt \
+            -e INDEX_PATH=/app/result/gallery.index \
+            -p 8000:8000 \
+            visual-similarity-search:${{ github.sha }}
+          sleep 5
+          curl --fail http://localhost:8000/health || (docker logs app && exit 1)
+          docker stop app
+
+  deploy:
+    runs-on: ubuntu-latest
+    needs: docker-build
+    if: github.ref == 'refs/heads/main' && github.event_name == 'push'
+    steps:
+      - name: Trigger Railway redeploy
+        run: curl --fail -X POST "${{ secrets.RAILWAY_DEPLOY_HOOK }}"
