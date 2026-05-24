@@ -29,6 +29,9 @@ env/
 # Jupyter
 .ipynb_checkpoints/
 
+# Dataset images (too large for git)
+result/data/
+
 # ML checkpoints (large model weights — not committed)
 checkpoints/
 *.pth
