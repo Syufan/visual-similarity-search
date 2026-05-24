@@ -1,72 +1,85 @@
 import torch
 import torch.nn as nn
-import open_clip
+import torch.nn.functional as F
 
 _model = None
 _preprocess = None
 _device = None
 
 
+class _LoRAWeights(nn.Module):
+    def __init__(self, r: int, d_in: int, d_out: int):
+        super().__init__()
+        self.lora_A = nn.Parameter(torch.randn(r, d_in) * 0.01)
+        self.lora_B = nn.Parameter(torch.zeros(d_out, r))
+
+
 class LoRALinear(nn.Module):
     def __init__(self, linear: nn.Linear, r: int = 8, alpha: int = 16):
         super().__init__()
         self.linear = linear
-        self.r = r
         self.scale = alpha / r
         d_out, d_in = linear.weight.shape
-        self.A = nn.Parameter(torch.randn(r, d_in) * 0.01)
-        self.B = nn.Parameter(torch.zeros(d_out, r))
+        self.lora = _LoRAWeights(r, d_in, d_out)
 
     def forward(self, x):
-        return self.linear(x) + (x @ self.A.T @ self.B.T) * self.scale
+        return self.linear(x) + (x @ self.lora.lora_A.T @ self.lora.lora_B.T) * self.scale
 
 
 class CLIPLoRA(nn.Module):
-    def __init__(self, clip_model, embed_dim: int = 256, r: int = 8, alpha: int = 16):
+    def __init__(self, r: int = 8, alpha: int = 16, embed_dim: int = 256):
         super().__init__()
-        self.clip = clip_model
-        for p in self.clip.parameters():
+        from transformers import CLIPModel
+        clip = CLIPModel.from_pretrained("openai/clip-vit-base-patch32")
+        self.vision_encoder = clip.vision_model.vision_model  # CLIPVisionTransformer
+
+        for p in self.vision_encoder.parameters():
             p.requires_grad_(False)
 
-        # inject LoRA into every attention projection in the visual transformer
-        for block in self.clip.visual.transformer.resblocks:
-            for name in ("in_proj", "out_proj"):
-                orig = getattr(block.attn, name, None)
-                if isinstance(orig, nn.Linear):
-                    setattr(block.attn, name, LoRALinear(orig, r=r, alpha=alpha))
+        for layer in self.vision_encoder.encoder.layers:
+            for name in ("q_proj", "v_proj"):
+                orig = getattr(layer.self_attn, name)
+                setattr(layer.self_attn, name, LoRALinear(orig, r=r, alpha=alpha))
 
-        visual_dim = self.clip.visual.output_dim
-        self.head = nn.Sequential(
-            nn.Linear(visual_dim, 512),
+        hidden_size = self.vision_encoder.config.hidden_size  # 768 for ViT-B/32
+        self.projector = nn.Sequential(
+            nn.Linear(hidden_size, 512),
+            nn.BatchNorm1d(512),
             nn.ReLU(),
+            nn.Dropout(0.1),
             nn.Linear(512, embed_dim),
         )
 
-    def forward(self, images):
-        with torch.no_grad():
-            feats = self.clip.encode_image(images).float()
-        out = self.head(feats)
-        return nn.functional.normalize(out, dim=-1)
+    def forward(self, pixel_values: torch.Tensor) -> torch.Tensor:
+        outputs = self.vision_encoder(pixel_values=pixel_values)
+        feats = outputs.pooler_output
+        return F.normalize(self.projector(feats), dim=-1)
+
+
+def _make_preprocess():
+    from transformers import CLIPImageProcessor
+    processor = CLIPImageProcessor.from_pretrained("openai/clip-vit-base-patch32")
+
+    def preprocess(image):
+        return processor(images=image, return_tensors="pt").pixel_values.squeeze(0)
+
+    return preprocess
 
 
 def get_model(checkpoint_path: str, device: str = "cpu"):
     global _model, _preprocess, _device
     if _model is None:
-        clip_model, _, preprocess = open_clip.create_model_and_transforms(
-            "ViT-B-32", pretrained="openai"
-        )
-        model = CLIPLoRA(clip_model).to(device)
-        state = torch.load(checkpoint_path, map_location=device)
+        model = CLIPLoRA().to(device)
+        state = torch.load(checkpoint_path, map_location=device, weights_only=True)
         model.load_state_dict(state)
         model.eval()
         _model = model
-        _preprocess = preprocess
+        _preprocess = _make_preprocess()
         _device = device
     return _model, _preprocess
 
 
 @torch.no_grad()
 def embed(images: torch.Tensor, device: str = "cpu") -> torch.Tensor:
-    model, _ = _model, _preprocess
     with torch.cuda.amp.autocast(enabled=(device != "cpu")):
-        return model(images.to(device)).cpu()
+        return _model(images.to(device)).cpu()
