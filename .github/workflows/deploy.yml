@@ -62,7 +62,21 @@ jobs:
           HF_TOKEN: ${{ secrets.HF_TOKEN }}
           HF_USERNAME: ${{ secrets.HF_USERNAME }}
         run: |
-          git config --global user.email "ci@github.com"
-          git config --global user.name "GitHub Actions"
+          # Fresh repo — avoids pushing binary file history to HF Spaces
+          mkdir hf_deploy
+          rsync -av --exclude='.git' \
+            --exclude='result/gallery.index' \
+            --exclude='result/gallery_embeddings.npy' \
+            --exclude='result/best_clip_deploy.pt' \
+            --exclude='result/data' \
+            --exclude='data/train' \
+            --exclude='data/test' \
+            . hf_deploy/
+          cd hf_deploy
+          git init
+          git config user.email "ci@github.com"
+          git config user.name "GitHub Actions"
+          git add .
+          git commit -m "deploy: $(date -u +%Y-%m-%dT%H:%M:%SZ)"
           git remote add hf https://$HF_USERNAME:$HF_TOKEN@huggingface.co/spaces/$HF_USERNAME/visual-similarity-search
           git push hf main:main --force
