@@ -1,0 +1,1808 @@
+[
+  {
+    "timestamp": "2026-05-24T14:38:53",
+    "name": "resnet152_triplet_batch_hard",
+    "seed": 42,
+    "split_seed": 101,
+    "save_dir": "/root/autodl-tmp/tll-metric-learning/checkpoints/advanced_results/resnet152_triplet_batch_hard__seed42__split101",
+    "config": {
+      "backbone": "resnet152",
+      "mining": "batch_hard",
+      "negative_sampling": "mixed"
+    },
+    "metrics": {
+      "embedding_dim": 256,
+      "lr": 0.0001,
+      "triplet_margin": 0.1,
+      "mining": "batch_hard",
+      "lora_r": 8,
+      "lora_alpha": 16,
+      "AUC": 0.805644,
+      "NDCG@10": 0.234044,
+      "MAP@1": 0.126667,
+      "MAP@5": 0.186444,
+      "MAP@10": 0.195776,
+      "eval_time_s": 1.51,
+      "MRR": 0.211013,
+      "Hit@1": 0.126667,
+      "Recall@1": 0.126667,
+      "Hit@5": 0.286667,
+      "Recall@5": 0.286667,
+      "Hit@10": 0.356667,
+      "Recall@10": 0.356667
+    }
+  },
+  {
+    "timestamp": "2026-05-24T14:40:25",
+    "name": "resnet152_triplet_batch_hard",
+    "seed": 52,
+    "split_seed": 202,
+    "save_dir": "/root/autodl-tmp/tll-metric-learning/checkpoints/advanced_results/resnet152_triplet_batch_hard__seed52__split202",
+    "config": {
+      "backbone": "resnet152",
+      "mining": "batch_hard",
+      "negative_sampling": "mixed"
+    },
+    "metrics": {
+      "embedding_dim": 256,
+      "lr": 0.0001,
+      "triplet_margin": 0.1,
+      "mining": "batch_hard",
+      "lora_r": 8,
+      "lora_alpha": 16,
+      "AUC": 0.788,
+      "NDCG@10": 0.237682,
+      "MAP@1": 0.14,
+      "MAP@5": 0.193389,
+      "MAP@10": 0.200999,
+      "eval_time_s": 1.52,
+      "MRR": 0.215759,
+      "Hit@1": 0.14,
+      "Recall@1": 0.14,
+      "Hit@5": 0.293333,
+      "Recall@5": 0.293333,
+      "Hit@10": 0.356667,
+      "Recall@10": 0.356667
+    }
+  },
+  {
+    "timestamp": "2026-05-24T14:42:06",
+    "name": "resnet152_triplet_batch_hard",
+    "seed": 62,
+    "split_seed": 303,
+    "save_dir": "/root/autodl-tmp/tll-metric-learning/checkpoints/advanced_results/resnet152_triplet_batch_hard__seed62__split303",
+    "config": {
+      "backbone": "resnet152",
+      "mining": "batch_hard",
+      "negative_sampling": "mixed"
+    },
+    "metrics": {
+      "embedding_dim": 256,
+      "lr": 0.0001,
+      "triplet_margin": 0.1,
+      "mining": "batch_hard",
+      "lora_r": 8,
+      "lora_alpha": 16,
+      "AUC": 0.812078,
+      "NDCG@10": 0.260198,
+      "MAP@1": 0.15,
+      "MAP@5": 0.209833,
+      "MAP@10": 0.219713,
+      "eval_time_s": 1.42,
+      "MRR": 0.234072,
+      "Hit@1": 0.15,
+      "Recall@1": 0.15,
+      "Hit@5": 0.316667,
+      "Recall@5": 0.316667,
+      "Hit@10": 0.39,
+      "Recall@10": 0.39
+    }
+  },
+  {
+    "timestamp": "2026-05-24T14:43:56",
+    "name": "clip_lora_qv_r8",
+    "seed": 42,
+    "split_seed": 101,
+    "save_dir": "/root/autodl-tmp/tll-metric-learning/checkpoints/advanced_results/clip_lora_qv_r8__seed42__split101",
+    "config": {
+      "backbone": "clip",
+      "lr": 5e-05,
+      "lora_target_modules": [
+        "q_proj",
+        "v_proj"
+      ],
+      "lora_r": 8,
+      "lora_alpha": 16,
+      "negative_sampling": "mixed"
+    },
+    "metrics": {
+      "embedding_dim": 256,
+      "lr": 5e-05,
+      "triplet_margin": 0.1,
+      "mining": "batch_hard",
+      "lora_r": 8,
+      "lora_alpha": 16,
+      "AUC": 0.949533,
+      "NDCG@10": 0.521738,
+      "MAP@1": 0.37,
+      "MAP@5": 0.459278,
+      "MAP@10": 0.468575,
+      "eval_time_s": 1.32,
+      "MRR": 0.480162,
+      "Hit@1": 0.37,
+      "Recall@1": 0.37,
+      "Hit@5": 0.62,
+      "Recall@5": 0.62,
+      "Hit@10": 0.69,
+      "Recall@10": 0.69
+    }
+  },
+  {
+    "timestamp": "2026-05-24T14:46:23",
+    "name": "clip_lora_qv_r8",
+    "seed": 52,
+    "split_seed": 202,
+    "save_dir": "/root/autodl-tmp/tll-metric-learning/checkpoints/advanced_results/clip_lora_qv_r8__seed52__split202",
+    "config": {
+      "backbone": "clip",
+      "lr": 5e-05,
+      "lora_target_modules": [
+        "q_proj",
+        "v_proj"
+      ],
+      "lora_r": 8,
+      "lora_alpha": 16,
+      "negative_sampling": "mixed"
+    },
+    "metrics": {
+      "embedding_dim": 256,
+      "lr": 5e-05,
+      "triplet_margin": 0.1,
+      "mining": "batch_hard",
+      "lora_r": 8,
+      "lora_alpha": 16,
+      "AUC": 0.951656,
+      "NDCG@10": 0.528907,
+      "MAP@1": 0.356667,
+      "MAP@5": 0.462667,
+      "MAP@10": 0.473131,
+      "eval_time_s": 1.26,
+      "MRR": 0.48407,
+      "Hit@1": 0.356667,
+      "Recall@1": 0.356667,
+      "Hit@5": 0.626667,
+      "Recall@5": 0.626667,
+      "Hit@10": 0.703333,
+      "Recall@10": 0.703333
+    }
+  },
+  {
+    "timestamp": "2026-05-24T14:48:49",
+    "name": "clip_lora_qv_r8",
+    "seed": 62,
+    "split_seed": 303,
+    "save_dir": "/root/autodl-tmp/tll-metric-learning/checkpoints/advanced_results/clip_lora_qv_r8__seed62__split303",
+    "config": {
+      "backbone": "clip",
+      "lr": 5e-05,
+      "lora_target_modules": [
+        "q_proj",
+        "v_proj"
+      ],
+      "lora_r": 8,
+      "lora_alpha": 16,
+      "negative_sampling": "mixed"
+    },
+    "metrics": {
+      "embedding_dim": 256,
+      "lr": 5e-05,
+      "triplet_margin": 0.1,
+      "mining": "batch_hard",
+      "lora_r": 8,
+      "lora_alpha": 16,
+      "AUC": 0.952211,
+      "NDCG@10": 0.535828,
+      "MAP@1": 0.373333,
+      "MAP@5": 0.4615,
+      "MAP@10": 0.475565,
+      "eval_time_s": 1.22,
+      "MRR": 0.484555,
+      "Hit@1": 0.373333,
+      "Recall@1": 0.373333,
+      "Hit@5": 0.623333,
+      "Recall@5": 0.623333,
+      "Hit@10": 0.73,
+      "Recall@10": 0.73
+    }
+  },
+  {
+    "timestamp": "2026-05-24T14:50:31",
+    "name": "resnet_batch_hard_mixed_neg",
+    "seed": 42,
+    "split_seed": 111,
+    "save_dir": "/root/autodl-tmp/tll-metric-learning/checkpoints/advanced_results/resnet_batch_hard_mixed_neg__seed42__split111",
+    "config": {
+      "backbone": "resnet152",
+      "mining": "batch_hard",
+      "negative_sampling": "mixed"
+    },
+    "metrics": {
+      "embedding_dim": 256,
+      "lr": 0.0001,
+      "triplet_margin": 0.1,
+      "mining": "batch_hard",
+      "lora_r": 8,
+      "lora_alpha": 16,
+      "AUC": 0.790111,
+      "NDCG@10": 0.222424,
+      "MAP@1": 0.113333,
+      "MAP@5": 0.159722,
+      "MAP@10": 0.176152,
+      "eval_time_s": 1.46,
+      "MRR": 0.190811,
+      "Hit@1": 0.113333,
+      "Recall@1": 0.113333,
+      "Hit@5": 0.25,
+      "Recall@5": 0.25,
+      "Hit@10": 0.376667,
+      "Recall@10": 0.376667
+    }
+  },
+  {
+    "timestamp": "2026-05-24T14:52:03",
+    "name": "resnet_batch_hard_mixed_neg",
+    "seed": 52,
+    "split_seed": 222,
+    "save_dir": "/root/autodl-tmp/tll-metric-learning/checkpoints/advanced_results/resnet_batch_hard_mixed_neg__seed52__split222",
+    "config": {
+      "backbone": "resnet152",
+      "mining": "batch_hard",
+      "negative_sampling": "mixed"
+    },
+    "metrics": {
+      "embedding_dim": 256,
+      "lr": 0.0001,
+      "triplet_margin": 0.1,
+      "mining": "batch_hard",
+      "lora_r": 8,
+      "lora_alpha": 16,
+      "AUC": 0.802222,
+      "NDCG@10": 0.203383,
+      "MAP@1": 0.12,
+      "MAP@5": 0.161667,
+      "MAP@10": 0.171612,
+      "eval_time_s": 1.54,
+      "MRR": 0.187963,
+      "Hit@1": 0.12,
+      "Recall@1": 0.12,
+      "Hit@5": 0.233333,
+      "Recall@5": 0.233333,
+      "Hit@10": 0.306667,
+      "Recall@10": 0.306667
+    }
+  },
+  {
+    "timestamp": "2026-05-24T14:53:46",
+    "name": "resnet_batch_hard_mixed_neg",
+    "seed": 62,
+    "split_seed": 333,
+    "save_dir": "/root/autodl-tmp/tll-metric-learning/checkpoints/advanced_results/resnet_batch_hard_mixed_neg__seed62__split333",
+    "config": {
+      "backbone": "resnet152",
+      "mining": "batch_hard",
+      "negative_sampling": "mixed"
+    },
+    "metrics": {
+      "embedding_dim": 256,
+      "lr": 0.0001,
+      "triplet_margin": 0.1,
+      "mining": "batch_hard",
+      "lora_r": 8,
+      "lora_alpha": 16,
+      "AUC": 0.809,
+      "NDCG@10": 0.254531,
+      "MAP@1": 0.123333,
+      "MAP@5": 0.197611,
+      "MAP@10": 0.208997,
+      "eval_time_s": 1.48,
+      "MRR": 0.223781,
+      "Hit@1": 0.123333,
+      "Recall@1": 0.123333,
+      "Hit@5": 0.316667,
+      "Recall@5": 0.316667,
+      "Hit@10": 0.4,
+      "Recall@10": 0.4
+    }
+  },
+  {
+    "timestamp": "2026-05-24T14:56:54",
+    "name": "resnet_random_mining_mixed_neg",
+    "seed": 42,
+    "split_seed": 111,
+    "save_dir": "/root/autodl-tmp/tll-metric-learning/checkpoints/advanced_results/resnet_random_mining_mixed_neg__seed42__split111",
+    "config": {
+      "backbone": "resnet152",
+      "mining": "random",
+      "negative_sampling": "mixed"
+    },
+    "metrics": {
+      "embedding_dim": 256,
+      "lr": 0.0001,
+      "triplet_margin": 0.1,
+      "mining": "random",
+      "lora_r": 8,
+      "lora_alpha": 16,
+      "AUC": 0.854589,
+      "NDCG@10": 0.272806,
+      "MAP@1": 0.14,
+      "MAP@5": 0.211,
+      "MAP@10": 0.22447,
+      "eval_time_s": 1.43,
+      "MRR": 0.240965,
+      "Hit@1": 0.14,
+      "Recall@1": 0.14,
+      "Hit@5": 0.32,
+      "Recall@5": 0.32,
+      "Hit@10": 0.43,
+      "Recall@10": 0.43
+    }
+  },
+  {
+    "timestamp": "2026-05-24T15:00:35",
+    "name": "resnet_random_mining_mixed_neg",
+    "seed": 52,
+    "split_seed": 222,
+    "save_dir": "/root/autodl-tmp/tll-metric-learning/checkpoints/advanced_results/resnet_random_mining_mixed_neg__seed52__split222",
+    "config": {
+      "backbone": "resnet152",
+      "mining": "random",
+      "negative_sampling": "mixed"
+    },
+    "metrics": {
+      "embedding_dim": 256,
+      "lr": 0.0001,
+      "triplet_margin": 0.1,
+      "mining": "random",
+      "lora_r": 8,
+      "lora_alpha": 16,
+      "AUC": 0.855122,
+      "NDCG@10": 0.256079,
+      "MAP@1": 0.13,
+      "MAP@5": 0.193778,
+      "MAP@10": 0.207803,
+      "eval_time_s": 1.42,
+      "MRR": 0.222112,
+      "Hit@1": 0.13,
+      "Recall@1": 0.13,
+      "Hit@5": 0.306667,
+      "Recall@5": 0.306667,
+      "Hit@10": 0.413333,
+      "Recall@10": 0.413333
+    }
+  },
+  {
+    "timestamp": "2026-05-24T15:02:16",
+    "name": "resnet_random_mining_mixed_neg",
+    "seed": 62,
+    "split_seed": 333,
+    "save_dir": "/root/autodl-tmp/tll-metric-learning/checkpoints/advanced_results/resnet_random_mining_mixed_neg__seed62__split333",
+    "config": {
+      "backbone": "resnet152",
+      "mining": "random",
+      "negative_sampling": "mixed"
+    },
+    "metrics": {
+      "embedding_dim": 256,
+      "lr": 0.0001,
+      "triplet_margin": 0.1,
+      "mining": "random",
+      "lora_r": 8,
+      "lora_alpha": 16,
+      "AUC": 0.818978,
+      "NDCG@10": 0.239371,
+      "MAP@1": 0.13,
+      "MAP@5": 0.190556,
+      "MAP@10": 0.198714,
+      "eval_time_s": 1.52,
+      "MRR": 0.215446,
+      "Hit@1": 0.13,
+      "Recall@1": 0.13,
+      "Hit@5": 0.306667,
+      "Recall@5": 0.306667,
+      "Hit@10": 0.37,
+      "Recall@10": 0.37
+    }
+  },
+  {
+    "timestamp": "2026-05-24T15:03:56",
+    "name": "resnet_batch_hard_left_only_neg",
+    "seed": 42,
+    "split_seed": 111,
+    "save_dir": "/root/autodl-tmp/tll-metric-learning/checkpoints/advanced_results/resnet_batch_hard_left_only_neg__seed42__split111",
+    "config": {
+      "backbone": "resnet152",
+      "mining": "batch_hard",
+      "negative_sampling": "left_only"
+    },
+    "metrics": {
+      "embedding_dim": 256,
+      "lr": 0.0001,
+      "triplet_margin": 0.1,
+      "mining": "batch_hard",
+      "lora_r": 8,
+      "lora_alpha": 16,
+      "AUC": 0.812444,
+      "NDCG@10": 0.236491,
+      "MAP@1": 0.143333,
+      "MAP@5": 0.191056,
+      "MAP@10": 0.200552,
+      "eval_time_s": 1.36,
+      "MRR": 0.216888,
+      "Hit@1": 0.143333,
+      "Recall@1": 0.143333,
+      "Hit@5": 0.28,
+      "Recall@5": 0.28,
+      "Hit@10": 0.353333,
+      "Recall@10": 0.353333
+    }
+  },
+  {
+    "timestamp": "2026-05-24T15:05:26",
+    "name": "resnet_batch_hard_left_only_neg",
+    "seed": 52,
+    "split_seed": 222,
+    "save_dir": "/root/autodl-tmp/tll-metric-learning/checkpoints/advanced_results/resnet_batch_hard_left_only_neg__seed52__split222",
+    "config": {
+      "backbone": "resnet152",
+      "mining": "batch_hard",
+      "negative_sampling": "left_only"
+    },
+    "metrics": {
+      "embedding_dim": 256,
+      "lr": 0.0001,
+      "triplet_margin": 0.1,
+      "mining": "batch_hard",
+      "lora_r": 8,
+      "lora_alpha": 16,
+      "AUC": 0.766889,
+      "NDCG@10": 0.206532,
+      "MAP@1": 0.106667,
+      "MAP@5": 0.161889,
+      "MAP@10": 0.170307,
+      "eval_time_s": 1.44,
+      "MRR": 0.18467,
+      "Hit@1": 0.106667,
+      "Recall@1": 0.106667,
+      "Hit@5": 0.256667,
+      "Recall@5": 0.256667,
+      "Hit@10": 0.323333,
+      "Recall@10": 0.323333
+    }
+  },
+  {
+    "timestamp": "2026-05-24T15:07:08",
+    "name": "resnet_batch_hard_left_only_neg",
+    "seed": 62,
+    "split_seed": 333,
+    "save_dir": "/root/autodl-tmp/tll-metric-learning/checkpoints/advanced_results/resnet_batch_hard_left_only_neg__seed62__split333",
+    "config": {
+      "backbone": "resnet152",
+      "mining": "batch_hard",
+      "negative_sampling": "left_only"
+    },
+    "metrics": {
+      "embedding_dim": 256,
+      "lr": 0.0001,
+      "triplet_margin": 0.1,
+      "mining": "batch_hard",
+      "lora_r": 8,
+      "lora_alpha": 16,
+      "AUC": 0.794278,
+      "NDCG@10": 0.254558,
+      "MAP@1": 0.16,
+      "MAP@5": 0.206556,
+      "MAP@10": 0.217984,
+      "eval_time_s": 1.41,
+      "MRR": 0.234339,
+      "Hit@1": 0.16,
+      "Recall@1": 0.16,
+      "Hit@5": 0.29,
+      "Recall@5": 0.29,
+      "Hit@10": 0.373333,
+      "Recall@10": 0.373333
+    }
+  },
+  {
+    "timestamp": "2026-05-24T15:08:58",
+    "name": "clip_lora_qv_r8_dim256",
+    "seed": 42,
+    "split_seed": 111,
+    "save_dir": "/root/autodl-tmp/tll-metric-learning/checkpoints/advanced_results/clip_lora_qv_r8_dim256__seed42__split111",
+    "config": {
+      "backbone": "clip",
+      "lr": 5e-05,
+      "lora_target_modules": [
+        "q_proj",
+        "v_proj"
+      ],
+      "lora_r": 8,
+      "lora_alpha": 16,
+      "embedding_dim": 256
+    },
+    "metrics": {
+      "embedding_dim": 256,
+      "lr": 5e-05,
+      "triplet_margin": 0.1,
+      "mining": "batch_hard",
+      "lora_r": 8,
+      "lora_alpha": 16,
+      "AUC": 0.9476,
+      "NDCG@10": 0.534853,
+      "MAP@1": 0.346667,
+      "MAP@5": 0.453056,
+      "MAP@10": 0.471467,
+      "eval_time_s": 1.31,
+      "MRR": 0.481123,
+      "Hit@1": 0.346667,
+      "Recall@1": 0.346667,
+      "Hit@5": 0.603333,
+      "Recall@5": 0.603333,
+      "Hit@10": 0.736667,
+      "Recall@10": 0.736667
+    }
+  },
+  {
+    "timestamp": "2026-05-24T15:11:22",
+    "name": "clip_lora_qv_r8_dim256",
+    "seed": 52,
+    "split_seed": 222,
+    "save_dir": "/root/autodl-tmp/tll-metric-learning/checkpoints/advanced_results/clip_lora_qv_r8_dim256__seed52__split222",
+    "config": {
+      "backbone": "clip",
+      "lr": 5e-05,
+      "lora_target_modules": [
+        "q_proj",
+        "v_proj"
+      ],
+      "lora_r": 8,
+      "lora_alpha": 16,
+      "embedding_dim": 256
+    },
+    "metrics": {
+      "embedding_dim": 256,
+      "lr": 5e-05,
+      "triplet_margin": 0.1,
+      "mining": "batch_hard",
+      "lora_r": 8,
+      "lora_alpha": 16,
+      "AUC": 0.938867,
+      "NDCG@10": 0.538451,
+      "MAP@1": 0.376667,
+      "MAP@5": 0.467278,
+      "MAP@10": 0.480335,
+      "eval_time_s": 1.3,
+      "MRR": 0.490675,
+      "Hit@1": 0.376667,
+      "Recall@1": 0.376667,
+      "Hit@5": 0.63,
+      "Recall@5": 0.63,
+      "Hit@10": 0.723333,
+      "Recall@10": 0.723333
+    }
+  },
+  {
+    "timestamp": "2026-05-24T15:12:57",
+    "name": "clip_lora_qv_r8_dim256",
+    "seed": 62,
+    "split_seed": 333,
+    "save_dir": "/root/autodl-tmp/tll-metric-learning/checkpoints/advanced_results/clip_lora_qv_r8_dim256__seed62__split333",
+    "config": {
+      "backbone": "clip",
+      "lr": 5e-05,
+      "lora_target_modules": [
+        "q_proj",
+        "v_proj"
+      ],
+      "lora_r": 8,
+      "lora_alpha": 16,
+      "embedding_dim": 256
+    },
+    "metrics": {
+      "embedding_dim": 256,
+      "lr": 5e-05,
+      "triplet_margin": 0.1,
+      "mining": "batch_hard",
+      "lora_r": 8,
+      "lora_alpha": 16,
+      "AUC": 0.943622,
+      "NDCG@10": 0.536893,
+      "MAP@1": 0.376667,
+      "MAP@5": 0.472167,
+      "MAP@10": 0.482225,
+      "eval_time_s": 1.31,
+      "MRR": 0.49223,
+      "Hit@1": 0.376667,
+      "Recall@1": 0.376667,
+      "Hit@5": 0.63,
+      "Recall@5": 0.63,
+      "Hit@10": 0.71,
+      "Recall@10": 0.71
+    }
+  },
+  {
+    "timestamp": "2026-05-24T15:14:59",
+    "name": "clip_lora_q_only",
+    "seed": 42,
+    "split_seed": 111,
+    "save_dir": "/root/autodl-tmp/tll-metric-learning/checkpoints/advanced_results/clip_lora_q_only__seed42__split111",
+    "config": {
+      "backbone": "clip",
+      "lr": 5e-05,
+      "lora_target_modules": [
+        "q_proj"
+      ],
+      "lora_r": 8,
+      "lora_alpha": 16,
+      "embedding_dim": 256
+    },
+    "metrics": {
+      "embedding_dim": 256,
+      "lr": 5e-05,
+      "triplet_margin": 0.1,
+      "mining": "batch_hard",
+      "lora_r": 8,
+      "lora_alpha": 16,
+      "AUC": 0.940733,
+      "NDCG@10": 0.521026,
+      "MAP@1": 0.36,
+      "MAP@5": 0.4545,
+      "MAP@10": 0.465552,
+      "eval_time_s": 1.34,
+      "MRR": 0.475201,
+      "Hit@1": 0.36,
+      "Recall@1": 0.36,
+      "Hit@5": 0.613333,
+      "Recall@5": 0.613333,
+      "Hit@10": 0.696667,
+      "Recall@10": 0.696667
+    }
+  },
+  {
+    "timestamp": "2026-05-24T15:17:23",
+    "name": "clip_lora_q_only",
+    "seed": 52,
+    "split_seed": 222,
+    "save_dir": "/root/autodl-tmp/tll-metric-learning/checkpoints/advanced_results/clip_lora_q_only__seed52__split222",
+    "config": {
+      "backbone": "clip",
+      "lr": 5e-05,
+      "lora_target_modules": [
+        "q_proj"
+      ],
+      "lora_r": 8,
+      "lora_alpha": 16,
+      "embedding_dim": 256
+    },
+    "metrics": {
+      "embedding_dim": 256,
+      "lr": 5e-05,
+      "triplet_margin": 0.1,
+      "mining": "batch_hard",
+      "lora_r": 8,
+      "lora_alpha": 16,
+      "AUC": 0.925289,
+      "NDCG@10": 0.502234,
+      "MAP@1": 0.35,
+      "MAP@5": 0.4425,
+      "MAP@10": 0.450815,
+      "eval_time_s": 1.42,
+      "MRR": 0.461477,
+      "Hit@1": 0.35,
+      "Recall@1": 0.35,
+      "Hit@5": 0.603333,
+      "Recall@5": 0.603333,
+      "Hit@10": 0.663333,
+      "Recall@10": 0.663333
+    }
+  },
+  {
+    "timestamp": "2026-05-24T15:19:06",
+    "name": "clip_lora_q_only",
+    "seed": 62,
+    "split_seed": 333,
+    "save_dir": "/root/autodl-tmp/tll-metric-learning/checkpoints/advanced_results/clip_lora_q_only__seed62__split333",
+    "config": {
+      "backbone": "clip",
+      "lr": 5e-05,
+      "lora_target_modules": [
+        "q_proj"
+      ],
+      "lora_r": 8,
+      "lora_alpha": 16,
+      "embedding_dim": 256
+    },
+    "metrics": {
+      "embedding_dim": 256,
+      "lr": 5e-05,
+      "triplet_margin": 0.1,
+      "mining": "batch_hard",
+      "lora_r": 8,
+      "lora_alpha": 16,
+      "AUC": 0.936244,
+      "NDCG@10": 0.504589,
+      "MAP@1": 0.336667,
+      "MAP@5": 0.438889,
+      "MAP@10": 0.448771,
+      "eval_time_s": 1.37,
+      "MRR": 0.458341,
+      "Hit@1": 0.336667,
+      "Recall@1": 0.336667,
+      "Hit@5": 0.606667,
+      "Recall@5": 0.606667,
+      "Hit@10": 0.68,
+      "Recall@10": 0.68
+    }
+  },
+  {
+    "timestamp": "2026-05-24T15:21:07",
+    "name": "clip_lora_v_only",
+    "seed": 42,
+    "split_seed": 111,
+    "save_dir": "/root/autodl-tmp/tll-metric-learning/checkpoints/advanced_results/clip_lora_v_only__seed42__split111",
+    "config": {
+      "backbone": "clip",
+      "lr": 5e-05,
+      "lora_target_modules": [
+        "v_proj"
+      ],
+      "lora_r": 8,
+      "lora_alpha": 16,
+      "embedding_dim": 256
+    },
+    "metrics": {
+      "embedding_dim": 256,
+      "lr": 5e-05,
+      "triplet_margin": 0.1,
+      "mining": "batch_hard",
+      "lora_r": 8,
+      "lora_alpha": 16,
+      "AUC": 0.9452,
+      "NDCG@10": 0.531525,
+      "MAP@1": 0.35,
+      "MAP@5": 0.461222,
+      "MAP@10": 0.472348,
+      "eval_time_s": 1.28,
+      "MRR": 0.481911,
+      "Hit@1": 0.35,
+      "Recall@1": 0.35,
+      "Hit@5": 0.636667,
+      "Recall@5": 0.636667,
+      "Hit@10": 0.716667,
+      "Recall@10": 0.716667
+    }
+  },
+  {
+    "timestamp": "2026-05-24T15:23:31",
+    "name": "clip_lora_v_only",
+    "seed": 52,
+    "split_seed": 222,
+    "save_dir": "/root/autodl-tmp/tll-metric-learning/checkpoints/advanced_results/clip_lora_v_only__seed52__split222",
+    "config": {
+      "backbone": "clip",
+      "lr": 5e-05,
+      "lora_target_modules": [
+        "v_proj"
+      ],
+      "lora_r": 8,
+      "lora_alpha": 16,
+      "embedding_dim": 256
+    },
+    "metrics": {
+      "embedding_dim": 256,
+      "lr": 5e-05,
+      "triplet_margin": 0.1,
+      "mining": "batch_hard",
+      "lora_r": 8,
+      "lora_alpha": 16,
+      "AUC": 0.929511,
+      "NDCG@10": 0.523952,
+      "MAP@1": 0.38,
+      "MAP@5": 0.458833,
+      "MAP@10": 0.472202,
+      "eval_time_s": 1.27,
+      "MRR": 0.482142,
+      "Hit@1": 0.38,
+      "Recall@1": 0.38,
+      "Hit@5": 0.59,
+      "Recall@5": 0.59,
+      "Hit@10": 0.69,
+      "Recall@10": 0.69
+    }
+  },
+  {
+    "timestamp": "2026-05-24T15:25:13",
+    "name": "clip_lora_v_only",
+    "seed": 62,
+    "split_seed": 333,
+    "save_dir": "/root/autodl-tmp/tll-metric-learning/checkpoints/advanced_results/clip_lora_v_only__seed62__split333",
+    "config": {
+      "backbone": "clip",
+      "lr": 5e-05,
+      "lora_target_modules": [
+        "v_proj"
+      ],
+      "lora_r": 8,
+      "lora_alpha": 16,
+      "embedding_dim": 256
+    },
+    "metrics": {
+      "embedding_dim": 256,
+      "lr": 5e-05,
+      "triplet_margin": 0.1,
+      "mining": "batch_hard",
+      "lora_r": 8,
+      "lora_alpha": 16,
+      "AUC": 0.944211,
+      "NDCG@10": 0.526075,
+      "MAP@1": 0.37,
+      "MAP@5": 0.464556,
+      "MAP@10": 0.474011,
+      "eval_time_s": 1.3,
+      "MRR": 0.484109,
+      "Hit@1": 0.37,
+      "Recall@1": 0.37,
+      "Hit@5": 0.62,
+      "Recall@5": 0.62,
+      "Hit@10": 0.69,
+      "Recall@10": 0.69
+    }
+  },
+  {
+    "timestamp": "2026-05-24T15:27:18",
+    "name": "clip_lora_r4",
+    "seed": 42,
+    "split_seed": 111,
+    "save_dir": "/root/autodl-tmp/tll-metric-learning/checkpoints/advanced_results/clip_lora_r4__seed42__split111",
+    "config": {
+      "backbone": "clip",
+      "lr": 5e-05,
+      "lora_target_modules": [
+        "q_proj",
+        "v_proj"
+      ],
+      "lora_r": 4,
+      "lora_alpha": 8,
+      "embedding_dim": 256
+    },
+    "metrics": {
+      "embedding_dim": 256,
+      "lr": 5e-05,
+      "triplet_margin": 0.1,
+      "mining": "batch_hard",
+      "lora_r": 4,
+      "lora_alpha": 8,
+      "AUC": 0.946744,
+      "NDCG@10": 0.534514,
+      "MAP@1": 0.376667,
+      "MAP@5": 0.470389,
+      "MAP@10": 0.480983,
+      "eval_time_s": 1.43,
+      "MRR": 0.491659,
+      "Hit@1": 0.376667,
+      "Recall@1": 0.376667,
+      "Hit@5": 0.626667,
+      "Recall@5": 0.626667,
+      "Hit@10": 0.703333,
+      "Recall@10": 0.703333
+    }
+  },
+  {
+    "timestamp": "2026-05-24T15:29:41",
+    "name": "clip_lora_r4",
+    "seed": 52,
+    "split_seed": 222,
+    "save_dir": "/root/autodl-tmp/tll-metric-learning/checkpoints/advanced_results/clip_lora_r4__seed52__split222",
+    "config": {
+      "backbone": "clip",
+      "lr": 5e-05,
+      "lora_target_modules": [
+        "q_proj",
+        "v_proj"
+      ],
+      "lora_r": 4,
+      "lora_alpha": 8,
+      "embedding_dim": 256
+    },
+    "metrics": {
+      "embedding_dim": 256,
+      "lr": 5e-05,
+      "triplet_margin": 0.1,
+      "mining": "batch_hard",
+      "lora_r": 4,
+      "lora_alpha": 8,
+      "AUC": 0.925567,
+      "NDCG@10": 0.507409,
+      "MAP@1": 0.353333,
+      "MAP@5": 0.443778,
+      "MAP@10": 0.455224,
+      "eval_time_s": 1.26,
+      "MRR": 0.465507,
+      "Hit@1": 0.353333,
+      "Recall@1": 0.353333,
+      "Hit@5": 0.583333,
+      "Recall@5": 0.583333,
+      "Hit@10": 0.673333,
+      "Recall@10": 0.673333
+    }
+  },
+  {
+    "timestamp": "2026-05-24T15:31:24",
+    "name": "clip_lora_r4",
+    "seed": 62,
+    "split_seed": 333,
+    "save_dir": "/root/autodl-tmp/tll-metric-learning/checkpoints/advanced_results/clip_lora_r4__seed62__split333",
+    "config": {
+      "backbone": "clip",
+      "lr": 5e-05,
+      "lora_target_modules": [
+        "q_proj",
+        "v_proj"
+      ],
+      "lora_r": 4,
+      "lora_alpha": 8,
+      "embedding_dim": 256
+    },
+    "metrics": {
+      "embedding_dim": 256,
+      "lr": 5e-05,
+      "triplet_margin": 0.1,
+      "mining": "batch_hard",
+      "lora_r": 4,
+      "lora_alpha": 8,
+      "AUC": 0.942411,
+      "NDCG@10": 0.521495,
+      "MAP@1": 0.33,
+      "MAP@5": 0.444833,
+      "MAP@10": 0.458509,
+      "eval_time_s": 1.33,
+      "MRR": 0.466107,
+      "Hit@1": 0.33,
+      "Recall@1": 0.33,
+      "Hit@5": 0.616667,
+      "Recall@5": 0.616667,
+      "Hit@10": 0.72,
+      "Recall@10": 0.72
+    }
+  },
+  {
+    "timestamp": "2026-05-24T15:33:20",
+    "name": "clip_lora_r16",
+    "seed": 42,
+    "split_seed": 111,
+    "save_dir": "/root/autodl-tmp/tll-metric-learning/checkpoints/advanced_results/clip_lora_r16__seed42__split111",
+    "config": {
+      "backbone": "clip",
+      "lr": 5e-05,
+      "lora_target_modules": [
+        "q_proj",
+        "v_proj"
+      ],
+      "lora_r": 16,
+      "lora_alpha": 32,
+      "embedding_dim": 256
+    },
+    "metrics": {
+      "embedding_dim": 256,
+      "lr": 5e-05,
+      "triplet_margin": 0.1,
+      "mining": "batch_hard",
+      "lora_r": 16,
+      "lora_alpha": 32,
+      "AUC": 0.947611,
+      "NDCG@10": 0.563939,
+      "MAP@1": 0.39,
+      "MAP@5": 0.494,
+      "MAP@10": 0.505811,
+      "eval_time_s": 1.36,
+      "MRR": 0.51516,
+      "Hit@1": 0.39,
+      "Recall@1": 0.39,
+      "Hit@5": 0.663333,
+      "Recall@5": 0.663333,
+      "Hit@10": 0.746667,
+      "Recall@10": 0.746667
+    }
+  },
+  {
+    "timestamp": "2026-05-24T15:34:56",
+    "name": "clip_lora_r16",
+    "seed": 52,
+    "split_seed": 222,
+    "save_dir": "/root/autodl-tmp/tll-metric-learning/checkpoints/advanced_results/clip_lora_r16__seed52__split222",
+    "config": {
+      "backbone": "clip",
+      "lr": 5e-05,
+      "lora_target_modules": [
+        "q_proj",
+        "v_proj"
+      ],
+      "lora_r": 16,
+      "lora_alpha": 32,
+      "embedding_dim": 256
+    },
+    "metrics": {
+      "embedding_dim": 256,
+      "lr": 5e-05,
+      "triplet_margin": 0.1,
+      "mining": "batch_hard",
+      "lora_r": 16,
+      "lora_alpha": 32,
+      "AUC": 0.9294,
+      "NDCG@10": 0.534723,
+      "MAP@1": 0.396667,
+      "MAP@5": 0.472111,
+      "MAP@10": 0.485296,
+      "eval_time_s": 1.39,
+      "MRR": 0.494997,
+      "Hit@1": 0.396667,
+      "Recall@1": 0.396667,
+      "Hit@5": 0.596667,
+      "Recall@5": 0.596667,
+      "Hit@10": 0.693333,
+      "Recall@10": 0.693333
+    }
+  },
+  {
+    "timestamp": "2026-05-24T15:37:19",
+    "name": "clip_lora_r16",
+    "seed": 62,
+    "split_seed": 333,
+    "save_dir": "/root/autodl-tmp/tll-metric-learning/checkpoints/advanced_results/clip_lora_r16__seed62__split333",
+    "config": {
+      "backbone": "clip",
+      "lr": 5e-05,
+      "lora_target_modules": [
+        "q_proj",
+        "v_proj"
+      ],
+      "lora_r": 16,
+      "lora_alpha": 32,
+      "embedding_dim": 256
+    },
+    "metrics": {
+      "embedding_dim": 256,
+      "lr": 5e-05,
+      "triplet_margin": 0.1,
+      "mining": "batch_hard",
+      "lora_r": 16,
+      "lora_alpha": 32,
+      "AUC": 0.951578,
+      "NDCG@10": 0.588611,
+      "MAP@1": 0.433333,
+      "MAP@5": 0.522944,
+      "MAP@10": 0.534619,
+      "eval_time_s": 1.34,
+      "MRR": 0.542697,
+      "Hit@1": 0.433333,
+      "Recall@1": 0.433333,
+      "Hit@5": 0.673333,
+      "Recall@5": 0.673333,
+      "Hit@10": 0.76,
+      "Recall@10": 0.76
+    }
+  },
+  {
+    "timestamp": "2026-05-24T15:38:55",
+    "name": "clip_lora_dim128",
+    "seed": 42,
+    "split_seed": 111,
+    "save_dir": "/root/autodl-tmp/tll-metric-learning/checkpoints/advanced_results/clip_lora_dim128__seed42__split111",
+    "config": {
+      "backbone": "clip",
+      "lr": 5e-05,
+      "lora_target_modules": [
+        "q_proj",
+        "v_proj"
+      ],
+      "lora_r": 8,
+      "lora_alpha": 16,
+      "embedding_dim": 128
+    },
+    "metrics": {
+      "embedding_dim": 128,
+      "lr": 5e-05,
+      "triplet_margin": 0.1,
+      "mining": "batch_hard",
+      "lora_r": 8,
+      "lora_alpha": 16,
+      "AUC": 0.9351,
+      "NDCG@10": 0.481333,
+      "MAP@1": 0.303333,
+      "MAP@5": 0.402222,
+      "MAP@10": 0.417635,
+      "eval_time_s": 1.4,
+      "MRR": 0.428525,
+      "Hit@1": 0.303333,
+      "Recall@1": 0.303333,
+      "Hit@5": 0.566667,
+      "Recall@5": 0.566667,
+      "Hit@10": 0.686667,
+      "Recall@10": 0.686667
+    }
+  },
+  {
+    "timestamp": "2026-05-24T15:41:14",
+    "name": "clip_lora_dim128",
+    "seed": 52,
+    "split_seed": 222,
+    "save_dir": "/root/autodl-tmp/tll-metric-learning/checkpoints/advanced_results/clip_lora_dim128__seed52__split222",
+    "config": {
+      "backbone": "clip",
+      "lr": 5e-05,
+      "lora_target_modules": [
+        "q_proj",
+        "v_proj"
+      ],
+      "lora_r": 8,
+      "lora_alpha": 16,
+      "embedding_dim": 128
+    },
+    "metrics": {
+      "embedding_dim": 128,
+      "lr": 5e-05,
+      "triplet_margin": 0.1,
+      "mining": "batch_hard",
+      "lora_r": 8,
+      "lora_alpha": 16,
+      "AUC": 0.9294,
+      "NDCG@10": 0.482046,
+      "MAP@1": 0.32,
+      "MAP@5": 0.412944,
+      "MAP@10": 0.425315,
+      "eval_time_s": 1.31,
+      "MRR": 0.436809,
+      "Hit@1": 0.32,
+      "Recall@1": 0.32,
+      "Hit@5": 0.566667,
+      "Recall@5": 0.566667,
+      "Hit@10": 0.663333,
+      "Recall@10": 0.663333
+    }
+  },
+  {
+    "timestamp": "2026-05-24T15:43:10",
+    "name": "clip_lora_dim128",
+    "seed": 62,
+    "split_seed": 333,
+    "save_dir": "/root/autodl-tmp/tll-metric-learning/checkpoints/advanced_results/clip_lora_dim128__seed62__split333",
+    "config": {
+      "backbone": "clip",
+      "lr": 5e-05,
+      "lora_target_modules": [
+        "q_proj",
+        "v_proj"
+      ],
+      "lora_r": 8,
+      "lora_alpha": 16,
+      "embedding_dim": 128
+    },
+    "metrics": {
+      "embedding_dim": 128,
+      "lr": 5e-05,
+      "triplet_margin": 0.1,
+      "mining": "batch_hard",
+      "lora_r": 8,
+      "lora_alpha": 16,
+      "AUC": 0.937733,
+      "NDCG@10": 0.544063,
+      "MAP@1": 0.39,
+      "MAP@5": 0.478111,
+      "MAP@10": 0.48991,
+      "eval_time_s": 1.35,
+      "MRR": 0.499001,
+      "Hit@1": 0.39,
+      "Recall@1": 0.39,
+      "Hit@5": 0.626667,
+      "Recall@5": 0.626667,
+      "Hit@10": 0.716667,
+      "Recall@10": 0.716667
+    }
+  },
+  {
+    "timestamp": "2026-05-24T15:44:33",
+    "name": "clip_lora_dim512",
+    "seed": 42,
+    "split_seed": 111,
+    "save_dir": "/root/autodl-tmp/tll-metric-learning/checkpoints/advanced_results/clip_lora_dim512__seed42__split111",
+    "config": {
+      "backbone": "clip",
+      "lr": 5e-05,
+      "lora_target_modules": [
+        "q_proj",
+        "v_proj"
+      ],
+      "lora_r": 8,
+      "lora_alpha": 16,
+      "embedding_dim": 512
+    },
+    "metrics": {
+      "embedding_dim": 512,
+      "lr": 5e-05,
+      "triplet_margin": 0.1,
+      "mining": "batch_hard",
+      "lora_r": 8,
+      "lora_alpha": 16,
+      "AUC": 0.948889,
+      "NDCG@10": 0.51929,
+      "MAP@1": 0.343333,
+      "MAP@5": 0.442778,
+      "MAP@10": 0.456534,
+      "eval_time_s": 1.34,
+      "MRR": 0.467093,
+      "Hit@1": 0.343333,
+      "Recall@1": 0.343333,
+      "Hit@5": 0.616667,
+      "Recall@5": 0.616667,
+      "Hit@10": 0.72,
+      "Recall@10": 0.72
+    }
+  },
+  {
+    "timestamp": "2026-05-24T15:46:09",
+    "name": "clip_lora_dim512",
+    "seed": 52,
+    "split_seed": 222,
+    "save_dir": "/root/autodl-tmp/tll-metric-learning/checkpoints/advanced_results/clip_lora_dim512__seed52__split222",
+    "config": {
+      "backbone": "clip",
+      "lr": 5e-05,
+      "lora_target_modules": [
+        "q_proj",
+        "v_proj"
+      ],
+      "lora_r": 8,
+      "lora_alpha": 16,
+      "embedding_dim": 512
+    },
+    "metrics": {
+      "embedding_dim": 512,
+      "lr": 5e-05,
+      "triplet_margin": 0.1,
+      "mining": "batch_hard",
+      "lora_r": 8,
+      "lora_alpha": 16,
+      "AUC": 0.935556,
+      "NDCG@10": 0.539909,
+      "MAP@1": 0.373333,
+      "MAP@5": 0.465833,
+      "MAP@10": 0.479462,
+      "eval_time_s": 1.25,
+      "MRR": 0.488263,
+      "Hit@1": 0.373333,
+      "Recall@1": 0.373333,
+      "Hit@5": 0.63,
+      "Recall@5": 0.63,
+      "Hit@10": 0.733333,
+      "Recall@10": 0.733333
+    }
+  },
+  {
+    "timestamp": "2026-05-24T15:47:52",
+    "name": "clip_lora_dim512",
+    "seed": 62,
+    "split_seed": 333,
+    "save_dir": "/root/autodl-tmp/tll-metric-learning/checkpoints/advanced_results/clip_lora_dim512__seed62__split333",
+    "config": {
+      "backbone": "clip",
+      "lr": 5e-05,
+      "lora_target_modules": [
+        "q_proj",
+        "v_proj"
+      ],
+      "lora_r": 8,
+      "lora_alpha": 16,
+      "embedding_dim": 512
+    },
+    "metrics": {
+      "embedding_dim": 512,
+      "lr": 5e-05,
+      "triplet_margin": 0.1,
+      "mining": "batch_hard",
+      "lora_r": 8,
+      "lora_alpha": 16,
+      "AUC": 0.950944,
+      "NDCG@10": 0.57159,
+      "MAP@1": 0.403333,
+      "MAP@5": 0.508333,
+      "MAP@10": 0.518784,
+      "eval_time_s": 1.42,
+      "MRR": 0.528322,
+      "Hit@1": 0.403333,
+      "Recall@1": 0.403333,
+      "Hit@5": 0.66,
+      "Recall@5": 0.66,
+      "Hit@10": 0.736667,
+      "Recall@10": 0.736667
+    }
+  },
+  {
+    "timestamp": "2026-05-24T15:50:12",
+    "name": "clip_lora_qkv_r8",
+    "seed": 42,
+    "split_seed": 111,
+    "save_dir": "/root/autodl-tmp/tll-metric-learning/checkpoints/advanced_results/clip_lora_qkv_r8__seed42__split111",
+    "config": {
+      "backbone": "clip",
+      "lr": 5e-05,
+      "lora_target_modules": [
+        "q_proj",
+        "k_proj",
+        "v_proj"
+      ],
+      "lora_r": 8,
+      "lora_alpha": 16,
+      "embedding_dim": 256
+    },
+    "metrics": {
+      "embedding_dim": 256,
+      "lr": 5e-05,
+      "triplet_margin": 0.1,
+      "mining": "batch_hard",
+      "lora_r": 8,
+      "lora_alpha": 16,
+      "AUC": 0.951622,
+      "NDCG@10": 0.563951,
+      "MAP@1": 0.413333,
+      "MAP@5": 0.491667,
+      "MAP@10": 0.506495,
+      "eval_time_s": 1.41,
+      "MRR": 0.515415,
+      "Hit@1": 0.413333,
+      "Recall@1": 0.413333,
+      "Hit@5": 0.64,
+      "Recall@5": 0.64,
+      "Hit@10": 0.75,
+      "Recall@10": 0.75
+    }
+  },
+  {
+    "timestamp": "2026-05-24T15:51:36",
+    "name": "clip_lora_qkv_r8",
+    "seed": 52,
+    "split_seed": 222,
+    "save_dir": "/root/autodl-tmp/tll-metric-learning/checkpoints/advanced_results/clip_lora_qkv_r8__seed52__split222",
+    "config": {
+      "backbone": "clip",
+      "lr": 5e-05,
+      "lora_target_modules": [
+        "q_proj",
+        "k_proj",
+        "v_proj"
+      ],
+      "lora_r": 8,
+      "lora_alpha": 16,
+      "embedding_dim": 256
+    },
+    "metrics": {
+      "embedding_dim": 256,
+      "lr": 5e-05,
+      "triplet_margin": 0.1,
+      "mining": "batch_hard",
+      "lora_r": 8,
+      "lora_alpha": 16,
+      "AUC": 0.930511,
+      "NDCG@10": 0.488261,
+      "MAP@1": 0.316667,
+      "MAP@5": 0.420833,
+      "MAP@10": 0.431438,
+      "eval_time_s": 1.37,
+      "MRR": 0.442247,
+      "Hit@1": 0.316667,
+      "Recall@1": 0.316667,
+      "Hit@5": 0.59,
+      "Recall@5": 0.59,
+      "Hit@10": 0.666667,
+      "Recall@10": 0.666667
+    }
+  },
+  {
+    "timestamp": "2026-05-24T15:53:19",
+    "name": "clip_lora_qkv_r8",
+    "seed": 62,
+    "split_seed": 333,
+    "save_dir": "/root/autodl-tmp/tll-metric-learning/checkpoints/advanced_results/clip_lora_qkv_r8__seed62__split333",
+    "config": {
+      "backbone": "clip",
+      "lr": 5e-05,
+      "lora_target_modules": [
+        "q_proj",
+        "k_proj",
+        "v_proj"
+      ],
+      "lora_r": 8,
+      "lora_alpha": 16,
+      "embedding_dim": 256
+    },
+    "metrics": {
+      "embedding_dim": 256,
+      "lr": 5e-05,
+      "triplet_margin": 0.1,
+      "mining": "batch_hard",
+      "lora_r": 8,
+      "lora_alpha": 16,
+      "AUC": 0.946711,
+      "NDCG@10": 0.553787,
+      "MAP@1": 0.403333,
+      "MAP@5": 0.488389,
+      "MAP@10": 0.501001,
+      "eval_time_s": 1.38,
+      "MRR": 0.51144,
+      "Hit@1": 0.403333,
+      "Recall@1": 0.403333,
+      "Hit@5": 0.623333,
+      "Recall@5": 0.623333,
+      "Hit@10": 0.723333,
+      "Recall@10": 0.723333
+    }
+  },
+  {
+    "timestamp": "2026-05-24T15:55:41",
+    "name": "clip_lora_qv_out_r8",
+    "seed": 42,
+    "split_seed": 111,
+    "save_dir": "/root/autodl-tmp/tll-metric-learning/checkpoints/advanced_results/clip_lora_qv_out_r8__seed42__split111",
+    "config": {
+      "backbone": "clip",
+      "lr": 5e-05,
+      "lora_target_modules": [
+        "q_proj",
+        "v_proj",
+        "out_proj"
+      ],
+      "lora_r": 8,
+      "lora_alpha": 16,
+      "embedding_dim": 256
+    },
+    "metrics": {
+      "embedding_dim": 256,
+      "lr": 5e-05,
+      "triplet_margin": 0.1,
+      "mining": "batch_hard",
+      "lora_r": 8,
+      "lora_alpha": 16,
+      "AUC": 0.953344,
+      "NDCG@10": 0.568222,
+      "MAP@1": 0.41,
+      "MAP@5": 0.495444,
+      "MAP@10": 0.509836,
+      "eval_time_s": 1.28,
+      "MRR": 0.51861,
+      "Hit@1": 0.41,
+      "Recall@1": 0.41,
+      "Hit@5": 0.646667,
+      "Recall@5": 0.646667,
+      "Hit@10": 0.756667,
+      "Recall@10": 0.756667
+    }
+  },
+  {
+    "timestamp": "2026-05-24T15:57:06",
+    "name": "clip_lora_qv_out_r8",
+    "seed": 52,
+    "split_seed": 222,
+    "save_dir": "/root/autodl-tmp/tll-metric-learning/checkpoints/advanced_results/clip_lora_qv_out_r8__seed52__split222",
+    "config": {
+      "backbone": "clip",
+      "lr": 5e-05,
+      "lora_target_modules": [
+        "q_proj",
+        "v_proj",
+        "out_proj"
+      ],
+      "lora_r": 8,
+      "lora_alpha": 16,
+      "embedding_dim": 256
+    },
+    "metrics": {
+      "embedding_dim": 256,
+      "lr": 5e-05,
+      "triplet_margin": 0.1,
+      "mining": "batch_hard",
+      "lora_r": 8,
+      "lora_alpha": 16,
+      "AUC": 0.932311,
+      "NDCG@10": 0.498075,
+      "MAP@1": 0.333333,
+      "MAP@5": 0.426778,
+      "MAP@10": 0.441139,
+      "eval_time_s": 1.32,
+      "MRR": 0.451143,
+      "Hit@1": 0.333333,
+      "Recall@1": 0.333333,
+      "Hit@5": 0.573333,
+      "Recall@5": 0.573333,
+      "Hit@10": 0.68,
+      "Recall@10": 0.68
+    }
+  },
+  {
+    "timestamp": "2026-05-24T15:58:53",
+    "name": "clip_lora_qv_out_r8",
+    "seed": 62,
+    "split_seed": 333,
+    "save_dir": "/root/autodl-tmp/tll-metric-learning/checkpoints/advanced_results/clip_lora_qv_out_r8__seed62__split333",
+    "config": {
+      "backbone": "clip",
+      "lr": 5e-05,
+      "lora_target_modules": [
+        "q_proj",
+        "v_proj",
+        "out_proj"
+      ],
+      "lora_r": 8,
+      "lora_alpha": 16,
+      "embedding_dim": 256
+    },
+    "metrics": {
+      "embedding_dim": 256,
+      "lr": 5e-05,
+      "triplet_margin": 0.1,
+      "mining": "batch_hard",
+      "lora_r": 8,
+      "lora_alpha": 16,
+      "AUC": 0.950367,
+      "NDCG@10": 0.561706,
+      "MAP@1": 0.41,
+      "MAP@5": 0.494944,
+      "MAP@10": 0.509171,
+      "eval_time_s": 1.37,
+      "MRR": 0.520121,
+      "Hit@1": 0.41,
+      "Recall@1": 0.41,
+      "Hit@5": 0.623333,
+      "Recall@5": 0.623333,
+      "Hit@10": 0.73,
+      "Recall@10": 0.73
+    }
+  },
+  {
+    "timestamp": "2026-05-24T16:22:12",
+    "name": "clip_lora_qkv_r8",
+    "seed": 42,
+    "split_seed": 111,
+    "save_dir": "/root/autodl-tmp/tll-metric-learning/checkpoints/advanced_results/clip_lora_qkv_r8__seed42__split111",
+    "config": {
+      "backbone": "clip",
+      "lr": 5e-05,
+      "lora_target_modules": [
+        "q_proj",
+        "k_proj",
+        "v_proj"
+      ],
+      "lora_r": 8,
+      "lora_alpha": 16,
+      "embedding_dim": 256
+    },
+    "metrics": {
+      "embedding_dim": 256,
+      "lr": 5e-05,
+      "triplet_margin": 0.1,
+      "mining": "batch_hard",
+      "lora_r": 8,
+      "lora_alpha": 16,
+      "AUC": 0.951622,
+      "NDCG@10": 0.563951,
+      "MAP@1": 0.413333,
+      "MAP@5": 0.491667,
+      "MAP@10": 0.506495,
+      "eval_time_s": 1.24,
+      "MRR": 0.515415,
+      "Hit@1": 0.413333,
+      "Recall@1": 0.413333,
+      "Hit@5": 0.64,
+      "Recall@5": 0.64,
+      "Hit@10": 0.75,
+      "Recall@10": 0.75
+    }
+  },
+  {
+    "timestamp": "2026-05-24T16:23:31",
+    "name": "clip_lora_qkv_r8",
+    "seed": 52,
+    "split_seed": 222,
+    "save_dir": "/root/autodl-tmp/tll-metric-learning/checkpoints/advanced_results/clip_lora_qkv_r8__seed52__split222",
+    "config": {
+      "backbone": "clip",
+      "lr": 5e-05,
+      "lora_target_modules": [
+        "q_proj",
+        "k_proj",
+        "v_proj"
+      ],
+      "lora_r": 8,
+      "lora_alpha": 16,
+      "embedding_dim": 256
+    },
+    "metrics": {
+      "embedding_dim": 256,
+      "lr": 5e-05,
+      "triplet_margin": 0.1,
+      "mining": "batch_hard",
+      "lora_r": 8,
+      "lora_alpha": 16,
+      "AUC": 0.930511,
+      "NDCG@10": 0.488261,
+      "MAP@1": 0.316667,
+      "MAP@5": 0.420833,
+      "MAP@10": 0.431438,
+      "eval_time_s": 1.13,
+      "MRR": 0.442247,
+      "Hit@1": 0.316667,
+      "Recall@1": 0.316667,
+      "Hit@5": 0.59,
+      "Recall@5": 0.59,
+      "Hit@10": 0.666667,
+      "Recall@10": 0.666667
+    }
+  },
+  {
+    "timestamp": "2026-05-24T16:25:11",
+    "name": "clip_lora_qkv_r8",
+    "seed": 62,
+    "split_seed": 333,
+    "save_dir": "/root/autodl-tmp/tll-metric-learning/checkpoints/advanced_results/clip_lora_qkv_r8__seed62__split333",
+    "config": {
+      "backbone": "clip",
+      "lr": 5e-05,
+      "lora_target_modules": [
+        "q_proj",
+        "k_proj",
+        "v_proj"
+      ],
+      "lora_r": 8,
+      "lora_alpha": 16,
+      "embedding_dim": 256
+    },
+    "metrics": {
+      "embedding_dim": 256,
+      "lr": 5e-05,
+      "triplet_margin": 0.1,
+      "mining": "batch_hard",
+      "lora_r": 8,
+      "lora_alpha": 16,
+      "AUC": 0.946711,
+      "NDCG@10": 0.553787,
+      "MAP@1": 0.403333,
+      "MAP@5": 0.488389,
+      "MAP@10": 0.501001,
+      "eval_time_s": 1.21,
+      "MRR": 0.51144,
+      "Hit@1": 0.403333,
+      "Recall@1": 0.403333,
+      "Hit@5": 0.623333,
+      "Recall@5": 0.623333,
+      "Hit@10": 0.723333,
+      "Recall@10": 0.723333
+    }
+  },
+  {
+    "timestamp": "2026-05-24T16:27:24",
+    "name": "clip_lora_qv_out_r8",
+    "seed": 42,
+    "split_seed": 111,
+    "save_dir": "/root/autodl-tmp/tll-metric-learning/checkpoints/advanced_results/clip_lora_qv_out_r8__seed42__split111",
+    "config": {
+      "backbone": "clip",
+      "lr": 5e-05,
+      "lora_target_modules": [
+        "q_proj",
+        "v_proj",
+        "out_proj"
+      ],
+      "lora_r": 8,
+      "lora_alpha": 16,
+      "embedding_dim": 256
+    },
+    "metrics": {
+      "embedding_dim": 256,
+      "lr": 5e-05,
+      "triplet_margin": 0.1,
+      "mining": "batch_hard",
+      "lora_r": 8,
+      "lora_alpha": 16,
+      "AUC": 0.953344,
+      "NDCG@10": 0.568222,
+      "MAP@1": 0.41,
+      "MAP@5": 0.495444,
+      "MAP@10": 0.509836,
+      "eval_time_s": 1.25,
+      "MRR": 0.51861,
+      "Hit@1": 0.41,
+      "Recall@1": 0.41,
+      "Hit@5": 0.646667,
+      "Recall@5": 0.646667,
+      "Hit@10": 0.756667,
+      "Recall@10": 0.756667
+    }
+  },
+  {
+    "timestamp": "2026-05-24T16:28:45",
+    "name": "clip_lora_qv_out_r8",
+    "seed": 52,
+    "split_seed": 222,
+    "save_dir": "/root/autodl-tmp/tll-metric-learning/checkpoints/advanced_results/clip_lora_qv_out_r8__seed52__split222",
+    "config": {
+      "backbone": "clip",
+      "lr": 5e-05,
+      "lora_target_modules": [
+        "q_proj",
+        "v_proj",
+        "out_proj"
+      ],
+      "lora_r": 8,
+      "lora_alpha": 16,
+      "embedding_dim": 256
+    },
+    "metrics": {
+      "embedding_dim": 256,
+      "lr": 5e-05,
+      "triplet_margin": 0.1,
+      "mining": "batch_hard",
+      "lora_r": 8,
+      "lora_alpha": 16,
+      "AUC": 0.932311,
+      "NDCG@10": 0.498075,
+      "MAP@1": 0.333333,
+      "MAP@5": 0.426778,
+      "MAP@10": 0.441139,
+      "eval_time_s": 1.24,
+      "MRR": 0.451143,
+      "Hit@1": 0.333333,
+      "Recall@1": 0.333333,
+      "Hit@5": 0.573333,
+      "Recall@5": 0.573333,
+      "Hit@10": 0.68,
+      "Recall@10": 0.68
+    }
+  },
+  {
+    "timestamp": "2026-05-24T16:30:24",
+    "name": "clip_lora_qv_out_r8",
+    "seed": 62,
+    "split_seed": 333,
+    "save_dir": "/root/autodl-tmp/tll-metric-learning/checkpoints/advanced_results/clip_lora_qv_out_r8__seed62__split333",
+    "config": {
+      "backbone": "clip",
+      "lr": 5e-05,
+      "lora_target_modules": [
+        "q_proj",
+        "v_proj",
+        "out_proj"
+      ],
+      "lora_r": 8,
+      "lora_alpha": 16,
+      "embedding_dim": 256
+    },
+    "metrics": {
+      "embedding_dim": 256,
+      "lr": 5e-05,
+      "triplet_margin": 0.1,
+      "mining": "batch_hard",
+      "lora_r": 8,
+      "lora_alpha": 16,
+      "AUC": 0.950367,
+      "NDCG@10": 0.561706,
+      "MAP@1": 0.41,
+      "MAP@5": 0.494944,
+      "MAP@10": 0.509171,
+      "eval_time_s": 1.17,
+      "MRR": 0.520121,
+      "Hit@1": 0.41,
+      "Recall@1": 0.41,
+      "Hit@5": 0.623333,
+      "Recall@5": 0.623333,
+      "Hit@10": 0.73,
+      "Recall@10": 0.73
+    }
+  }
+]
