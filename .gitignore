@@ -30,7 +30,8 @@ env/
 .ipynb_checkpoints/
 
 # Dataset images (too large for git)
-result/data/
+result/data/train/
+result/data/test*/
 
 # ML checkpoints (large model weights — not committed)
 checkpoints/
