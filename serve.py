@@ -40,10 +40,15 @@ async def lifespan(app: FastAPI):
         index_path = _ensure_file(
             os.environ.get("INDEX_PATH", "gallery.index"), "gallery.index"
         )
+        filenames_path = _ensure_file(
+            os.environ.get("FILENAMES_PATH", "gallery_filenames.json"),
+            "gallery_filenames.json",
+        )
         _pipeline = RetrievalPipeline(
             checkpoint_path=checkpoint_path,
             index_path=index_path,
             device=os.environ.get("DEVICE", "cpu"),
+            filenames_path=filenames_path,
         )
         logger.info("pipeline ready")
     else:
