@@ -15,12 +15,13 @@ HF_REPO_ID = "Yufanjeff/visual-similarity-search-model"
 CHECKPOINT_FILENAME = "best_clip_deploy.pt"
 
 
-def _ensure_checkpoint(path: str) -> str:
-    if not Path(path).exists():
-        logging.getLogger(__name__).info(f"Downloading model from HF Hub: {HF_REPO_ID}")
+def _ensure_file(local_path: str, filename: str) -> str:
+    if not Path(local_path).exists():
+        logger_tmp = logging.getLogger(__name__)
+        logger_tmp.info(f"Downloading {filename} from HF Hub: {HF_REPO_ID}")
         from huggingface_hub import hf_hub_download
-        path = hf_hub_download(repo_id=HF_REPO_ID, filename=CHECKPOINT_FILENAME)
-    return path
+        local_path = hf_hub_download(repo_id=HF_REPO_ID, filename=filename)
+    return local_path
 
 logging.basicConfig(level=logging.INFO, format='{"ts":"%(asctime)s","msg":"%(message)s"}')
 logger = logging.getLogger(__name__)
@@ -33,10 +34,15 @@ API_KEY = os.environ.get("API_KEY", "")
 async def lifespan(app: FastAPI):
     global _pipeline
     if os.environ.get("TESTING") != "1":
-        checkpoint_path = _ensure_checkpoint(os.environ.get("MODEL_PATH", CHECKPOINT_FILENAME))
+        checkpoint_path = _ensure_file(
+            os.environ.get("MODEL_PATH", CHECKPOINT_FILENAME), CHECKPOINT_FILENAME
+        )
+        index_path = _ensure_file(
+            os.environ.get("INDEX_PATH", "gallery.index"), "gallery.index"
+        )
         _pipeline = RetrievalPipeline(
             checkpoint_path=checkpoint_path,
-            index_path=os.environ["INDEX_PATH"],
+            index_path=index_path,
             device=os.environ.get("DEVICE", "cpu"),
         )
         logger.info("pipeline ready")
